@@ -48,3 +48,10 @@ And follow the basic instructions there, basically it's
 
 	gem install jekyll
 	jekyll new david-kerwick-blog
+
+## Publish
+Commit and push it will look a little something like this.
+
+![sourceTree6](/assets/img/publishing-blog-on-github/sourceTree6.png)
+
+Then marvel at the glory of your basic blog
