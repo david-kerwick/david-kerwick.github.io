@@ -22,7 +22,7 @@ And Google Analytics has a bit more to it than a hit counter.
 
 So one option is Google quick start for Analytics [here](https://developers.google.com/analytics/devguides/collection/analyticsjs/) yea that makes a lot of assumptions that you have done this before.
 
-In my searching for more information I happened upon [Google Tag Manager](https://www.google.com/tagmanager/) which promises to make things all simple a dreamy. Now it does seem odd to complain about the docs being hard to follow and then choosing the newest thing without understanding the basics but I aim to be consistently inconsistent as much as possible.
+In my searching for more information I happened upon [Google Tag Manager](https://www.google.com/tagmanager/) which promises to make things all simple and dreamy. Now it does seem odd to complain about the docs being hard to follow and then choosing the newest thing without understanding the basics but I aim to be consistently inconsistent as much as possible.
 
 ## Creating a Tag Manager Account
 I assume you have a Google account (who doesn't) head to [Sign up](https://tagmanager.google.com/) to sign up
@@ -42,6 +42,29 @@ This gives you a snippet to add to your html
 
 I added this snippet to the `_layouts/default.html` under the body tag as instructed.
 
-This then goes the to rather unintuitive page 
+This then goes to rather boxy page below
 
 ![google4](/assets/img/add-google-analytics-to-jekyll/google4.png)
+
+So this is where reading the instructions would probably help but sure how hard could it be.  So click on New Tag, this will give you a set of possible options
+
+![google5](/assets/img/add-google-analytics-to-jekyll/google5.png)
+
+For now I'm only interested in Analytics so choose that and then realise I still need to setup a Google Analytics account anyway to get the tracking code. 
+[Simple setup here]({% post_url 2015-06-22-setup-google-analytics-account %}) Enter your tracking code from when you set up your site on Google Analytics
+
+![google6](/assets/img/add-google-analytics-to-jekyll/google6.png)
+
+You will want this code to fire on every page to set that up in 'Fire on'
+
+![google7](/assets/img/add-google-analytics-to-jekyll/google7.png)
+
+That's your tag set up
+
+![google8](/assets/img/add-google-analytics-to-jekyll/google8.png)
+
+You then hit publish and the magic should happen
+
+![google9](/assets/img/add-google-analytics-to-jekyll/google9.png)
+
+So it seems to have worked, all I need now is some traffic in order to be sure... that should take a while, it's not exactly a high traffic blog. But in general not so bad, it also seems like Blogger has the dumbed down version of Analytics as there is a world of choice there way too much for the 4 hits I get but it will be interesting to play with
