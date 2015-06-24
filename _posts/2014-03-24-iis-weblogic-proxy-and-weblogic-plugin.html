@@ -1,0 +1,13 @@
+---
+layout: post
+title: IIS weblogic proxy and Weblogic plugin enabled
+date: '2014-03-24T14:40:00.000Z'
+author: David
+tags:
+- weblogic
+modified_time: '2014-03-24T14:40:19.292Z'
+blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2857585544300264902
+blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/iis-weblogic-proxy-and-weblogic-plugin.html
+---
+
+If you have IIS in front of your Weblogic cluster you are probably familiar with the 'WebLogic Plug-In Enabled:' feature on Weblogic server. This allows the access logs and calls to getRemoteAddr() to return the IP address of the client rather than the IP of the webserver, which is where the request has come from.<br /><br />Having set up the dynamic servers using a template I was wondering why this wasn't working. &nbsp;I had set the &nbsp;'WebLogic Plug-In Enabled:' to yes in the Configuration --&gt; General --&gt; Advanced section of the Clusters --&gt; Server Templates<br /><br />There are two places for this setting the 'server' one which in this case is the server template and the 'cluster' one, the cluster one over rides the server one. &nbsp;You'd think after going into Clusters --&gt; Server Templates you would be in the right place. &nbsp;You of course would be wrong.<br /><br />Head to Clusters and click on the cluster you have set up, in its Configuration --&gt; General --&gt; Advanced section set 'WebLogic Plug-In Enabled:' to yes and you should be golden.<br />        <br />

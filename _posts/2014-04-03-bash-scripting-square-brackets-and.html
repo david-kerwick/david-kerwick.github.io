@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'Bash scripting square brackets and ampersands '
+date: '2014-04-03T14:39:00.000+01:00'
+author: David
+tags: 
+modified_time: '2014-04-03T14:39:51.730+01:00'
+blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-6950441359672593999
+blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/bash-scripting-square-brackets-and.html
+---
+
+So I'm trying to create a startup script for Weblogic on Redhat.<br />There's a few out there, but I wanted one that did everything I wanted and that I also understood.<br />I'm not an admin so this scripting thing is a dark art to me.<br /><br />I'll hopefully have the actual script in a later post but for now I noticed alot of the lines below in example init scripts I came across.<br /><br />For the start function<br /><br /><pre class="brush: bash">[ ${RETVAL} -eq 0 ] &amp;&amp; touch ${LOCKFILE}</pre><br />For the stop function   <br /><br /><pre class="brush: bash">[ ${RETVAL} -eq 0 ] &amp;&amp; rm -f ${LOCKFILE}</pre><br />So creation and removal of the lock file, problem for me was I didn't quite understand what it was doing exactly, examples and tutorials kind of gloss over it as something to basic to explain, which is fair enough it is a basic built in function, I just didn't know about it.<br /><br />In bash [ is a built in command for test it doesn't need the if<br />In bash &amp;&amp; is a control operator, this says if the previous command is true (exit status 0) continue on<br /><br />So the above line is a shortcut for    <br /><br /><pre class="brush: bash">if [${RETVAL} -eq 0]; then<br />   touch ${LOCKFILE}<br />fi<br /></pre>

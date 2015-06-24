@@ -1,0 +1,14 @@
+---
+layout: post
+title: Create a 'machine' for Weblogic with WLST
+date: '2014-03-20T22:36:00.000Z'
+author: David
+tags:
+- wlst
+- weblogic
+modified_time: '2014-04-03T22:40:29.112+01:00'
+blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-6599294441738696385
+blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/create-machine-for-weblogic-with-wlst.html
+---
+
+Following on from my <a href="http://davidkerwick.blogspot.ie/2014/03/create-new-weblogic-domain-using-wlst.html">post</a>&nbsp;on creating a domain using WLST here is how to create a machine on the weblogic server.<br /><br /><pre class="brush: python">if __name__ == '__main__':<br />    from wlstModule import *<br /><br />print 'Starting createMachine script ....'<br />#connect to the adminserver this time, using the username, password <br />#and hostname set you in the create domain script<br />connect('weblogic', 'weblogic1', 't3://myhost.mydomain.ie:7001')<br /><br />#start up an edit session<br />edit()<br />startEdit()<br />#change to the root<br />cd('/')<br /><br />#create a unix machine with what ever name suits<br />myMachine = cmo.createUnixMachine("my-machine")<br /><br />print 'Create machine result: ' + str(myMachine)<br /><br />#set the nodemanager settings, again that match the settings set up in <br />#the create domain script<br />myMachine.getNodeManager().setNMType('plain')<br />myMachine.getNodeManager().setListenAddress('myhost.mydomain.ie')<br /><br />#save and activate the changes<br />save()<br />activate(block="true")<br /><br />print 'Done'<br /><br />exit()<br /></pre><br />
