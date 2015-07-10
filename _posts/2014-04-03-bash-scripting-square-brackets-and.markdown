@@ -18,11 +18,11 @@ I'll hopefully have the actual script in a later post but for now I noticed alot
 
 For the start function  
 
-<pre class="brush: bash">[ ${RETVAL} -eq 0 ] && touch ${LOCKFILE}</pre>
+{% highlight bash %} [ ${RETVAL} -eq 0 ] && touch ${LOCKFILE}{% endhighlight %} 
 
 For the stop function   
 
-<pre class="brush: bash">[ ${RETVAL} -eq 0 ] && rm -f ${LOCKFILE}</pre>
+{% highlight bash %} [ ${RETVAL} -eq 0 ] && rm -f ${LOCKFILE}{% endhighlight %} 
 
 So creation and removal of the lock file, problem for me was I didn't quite understand what it was doing exactly, examples and tutorials kind of gloss over it as something to basic to explain, which is fair enough it is a basic built in function, I just didn't know about it.  
 
@@ -31,7 +31,7 @@ In bash && is a control operator, this says if the previous command is true (exi
 
 So the above line is a shortcut for  
 
-<pre class="brush: bash">if [${RETVAL} -eq 0]; then  
+{% highlight bash %} if [${RETVAL} -eq 0]; then  
    touch ${LOCKFILE}  
 fi  
-</pre>
+{% endhighlight %} 
