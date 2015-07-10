@@ -1,0 +1,22 @@
+---
+layout: post
+title: Turn off the firewall on RedHat linux
+date: '2014-03-27T21:06:00.000Z'
+author: David
+tags: 
+modified_time: '2014-03-27T21:08:26.065Z'
+blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-7640093124386117990
+blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/turn-off-firewall-on-redhat-linux.html
+---
+
+If you are  having problems connecting with the Weblogic server you have just installed it's worth looking at the firewall, as every good developer knows all problems are either the network or the firewall ;)  
+
+{% highlight bash %} 
+service iptables stop  
+chkconfig iptables off  
+
+service ip6tables stop  
+chkconfig ip6tables off  
+{%endhighlight %} 
+
+A total sledgehammer approach and only for dev machines, I'll come back and work out just the ports and ip's I need in the future... honestly
