@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Wrapping code with Jekyll and pygments"
-date:   2015-07-09 18:00:00
+date:   2015-07-24 22:31:29
 categories: 
 - blog
 - blogger
@@ -24,7 +24,9 @@ So the highlight block says there are only two parameter language and linenos, s
 [:linenos,     opts.fetch(:linenos, nil)],
 [:encoding,    opts.fetch(:encoding, 'utf-8')],
 [:cssclass,    opts.fetch(:cssclass, nil)]
-{% endhighlight %}cssclass being the one I reckoned I want as it allows you to change the class used for the parent `<div>` Pygments creates, the default is the class highlight.
+{% endhighlight %}
+
+cssclass being the one I reckoned I want as it allows you to change the class used for the parent `<div>` Pygments creates, the default is the class highlight.
 
 First I add a class to main.scss for the no line wrapping
 
@@ -36,9 +38,13 @@ First I add a class to main.scss for the no line wrapping
       white-space: -o-pre-wrap; /* Opera 7 */  
       word-wrap: break-word; /* Internet Explorer 5.5+ */  
 }  
-{% endhighlight %}So first attempt looked something like this{% highlight ruby linenos %}
+{% endhighlight %}
+
+So first attempt looked something like this
+{% highlight ruby linenos %}
 {% raw %}
-{% highlight java cssclass=nowrap %}java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context   
+{% highlight java cssclass=nowrap %}
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context   
 {% endhighlight %}
 {% endraw %}
 {% endhighlight %}
@@ -49,7 +55,8 @@ Attempt two, I tried to add the two classes to what is produced
 
 {% highlight ruby linenos %}
 {% raw %}
-{% highlight java cssclass="hightlight nowrap" %}java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context   
+{% highlight java cssclass="hightlight nowrap" %}
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context   
 {% endhighlight %}
 {% endraw %}
 {% endhighlight %}
@@ -57,7 +64,9 @@ Attempt two, I tried to add the two classes to what is produced
 But this gives the error
 {% highlight bash %}
 Liquid Exception: Syntax Error in tag 'highlight' while parsing the following markup: java cssclass="hightlight nowrap" Valid syntax: highlight <lang> [linenos] in
-{% endhighlight %}Thought initially it was something like the cssclass not showing up as one of the options but it seems that the quoted list is only for `hl_linenos` which if for the lines to highlight and therefore only takes numbers.
+{% endhighlight %}
+
+Thought initially it was something like the cssclass not showing up as one of the options but it seems that the quoted list is only for `hl_linenos` which if for the lines to highlight and therefore only takes numbers.
 
 I spent way too much time trying to figure a way of passing two classes to that option, variables, escaping, try to change it so when it has nowrap it adds hightlight in front, using :before, etc...
 All in vain.
@@ -70,4 +79,6 @@ I just added the below to main.scss
 .nowrap{
   @extend .highlight;
 }
-{% endhighlight %}So back to the first attempt and it now wraps the lines and highlights the code.  All very simple in the end
+{% endhighlight %}
+
+So back to the first attempt and it now wraps the lines and highlights the code.  All very simple in the end

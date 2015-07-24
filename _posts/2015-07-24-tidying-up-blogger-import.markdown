@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tidying up Blogger Import"
-date:   2015-07-07 18:00:00
+date:   2015-07-24 22:30:36
 categories: 
 - blog
 - blogger
