@@ -3,7 +3,7 @@ layout: post
 title: Setting up AutoFileName plugin in Sublime for Markdown files
 categories: 
  - blog
-date: 2015-07-28 11:38:43
+date: 2015-07-29 00:39:23
 
 ---
 
