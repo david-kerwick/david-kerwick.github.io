@@ -9,4 +9,64 @@ blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-42414710554195383
 blogger_orig_url: http://davidkerwick.blogspot.com/2015/03/creating-ssh-key-and-add-it-to-server.html
 ---
 
-So it's rare when I have to generate a new key and add it to a server to I forget the commands, they ain't complex so here they are<br /><br /><br /><!-- HTML generated using hilite.me --><br /><div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;"><table><tbody><tr><td><pre style="line-height: 125%; margin: 0;"> 1<br /> 2<br /> 3<br /> 4<br /> 5<br /> 6<br /> 7<br /> 8<br /> 9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20<br />21</pre></td><td><pre style="line-height: 125%; margin: 0;">ssh-keygen -t rsa<br />Generating public/private rsa key pair.<br />Enter file in which to save the key <span style="color: #333333;">(</span>/Users/David/.ssh/id_rsa<span style="color: #333333;">)</span>:<br />Enter passphrase <span style="color: #333333;">(</span>empty <span style="color: #008800; font-weight: bold;">for </span>no passphrase<span style="color: #333333;">)</span>:<br />Enter same passphrase again:<br />Your identification has been saved in /Users/David/.ssh/id_rsa.<br />Your public key has been saved in /Users/David/.ssh/id_rsa.pub.<br />The key fingerprint is:<br />0a:9c:f7:43:dd:e8:5d:44:48:76:fd:30:ac:c9:cd:e2 David@DavidiMac.local<br />The key's randomart image is:<br />+--<span style="color: #333333;">[</span> RSA 2048<span style="color: #333333;">]</span>----+<br />|             .. o|<br />|             .+..|<br />|     o +    E.   |<br />|       o o o     |<br />|       .+.o      |<br />+-----------------+<br /></pre></td></tr></tbody></table></div><br />To add to a server<br /><br /><!-- HTML generated using hilite.me --><br /><div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;"><table><tbody><tr><td><pre style="line-height: 125%; margin: 0;">1<br />2<br />3</pre></td><td><pre style="line-height: 125%; margin: 0;">cat .ssh/id_rsa.pub | ssh system@192.168.1.160 <span style="background-color: #fff0f0;">'cat &gt;&gt; .ssh/authorized_keys'</span><br />system@192.168.1.160<span style="background-color: #ffaaaa; color: red;">'</span>s password:<br />bash: .ssh/authorized_keys: No such file or directory<br /></pre></td></tr></tbody></table></div><br />Doh!<br />Need to create the .ssh folder on the server system first<br /><!-- HTML generated using hilite.me --><br /><div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;"><table><tbody><tr><td><pre style="line-height: 125%; margin: 0;">1<br />2</pre></td><td><pre style="line-height: 125%; margin: 0;">sh system@192.168.1.160 mkdir -p .ssh<br />system@192.168.1.160's password:<br /></pre></td></tr></tbody></table></div><br />try the command above again and we should be good.<br /><br />Except that doesn't always work, ubuntu isn't happy.<br /><br /><!-- HTML generated using hilite.me --><br /><div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;"><table><tbody><tr><td><pre style="line-height: 125%; margin: 0;">1<br />2<br />3</pre></td><td><pre style="line-height: 125%; margin: 0;">cat .ssh/id_rsa.pub | ssh system@192.168.1.160 <span style="background-color: #fff0f0;">'cat &gt;&gt; .ssh/authorized_keys2'</span><br />system@192.168.1.160<span style="background-color: #ffaaaa; color: red;">'</span>s password:<br />bash: .ssh/authorized_keys: No such file or directory<br /></pre></td></tr></tbody></table></div><br />Still not happy?<br /><br />Time to actually log in to the server to start changing permissions<br /><!-- HTML generated using hilite.me --><br /><div style="background: #ffffff; border-width: .1em .1em .1em .8em; border: solid gray; overflow: auto; padding: .2em .6em; width: auto;"><table><tbody><tr><td><pre style="line-height: 125%; margin: 0;">1<br />2<br />3<br />4<br />5<br />6<br />7</pre></td><td><pre style="line-height: 125%; margin: 0;">system@ubuntu:~<span style="color: #996633;">$ </span><span style="color: #007020;">cd</span><br />system@ubuntu:~<span style="color: #996633;">$ </span><span style="color: #007020;">pwd</span><br />/home/system<br />system@ubuntu:~<span style="color: #996633;">$ </span>chmod 700 .ssh<br />system@ubuntu:~<span style="color: #996633;">$ </span><span style="color: #007020;">cd</span> .ssh/<br />system@ubuntu:~/.ssh<span style="color: #996633;">$ </span>chmod 640 authorized_keys2<br />system@ubuntu:~/.ssh<span style="background-color: #ffaaaa; color: red;">$</span><br /></pre></td></tr></tbody></table></div><br />
+So it's rare when I have to generate a new key and add it to a server to I forget the commands, they ain't complex so here they are  
+
+{% highlight bash %}
+ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/David/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/David/.ssh/id_rsa.
+Your public key has been saved in /Users/David/.ssh/id_rsa.pub.
+The key fingerprint is:
+0a:9c:f7:43:dd:e8:5d:44:48:76:fd:30:ac:c9:cd:e2 David@DavidiMac.local
+The key's randomart image is:
++--[ RSA 2048]----+
+|             .. o|
+|             .+..|
+|     o +    E.   |
+|       o o o     |
+|       .+.o      |
++-----------------+
+{% endhighlight %}
+
+To add to a server  
+
+{% highlight bash %}
+cat .ssh/id_rsa.pub | ssh system@192.168.1.160 'cat >> .ssh/authorized_keys'
+system@192.168.1.160's password:
+bash: .ssh/authorized_keys: No such file or directory
+{% endhighlight %}
+
+Doh!  
+Need to create the .ssh folder on the server system first  
+
+{% highlight bash %}
+ssh system@192.168.1.160 mkdir -p .ssh
+system@192.168.1.160's password:
+{% endhighlight %}
+
+Try the command above again and we should be good.  
+
+Except that doesn't always work, ubuntu isn't happy.  
+
+{% highlight bash %}
+cat .ssh/id_rsa.pub | ssh system@192.168.1.160 'cat >> .ssh/authorized_keys2'
+system@192.168.1.160's password:
+bash: .ssh/authorized_keys: No such file or directory
+{% endhighlight %}
+
+Still not happy?  
+
+Time to actually log in to the server to start changing permissions  
+
+{% highlight bash %}
+system@ubuntu:~$ cd
+system@ubuntu:~$ pwd
+/home/system
+system@ubuntu:~$ chmod 700 .ssh
+system@ubuntu:~$ cd .ssh/
+system@ubuntu:~/.ssh$ chmod 640 authorized_keys2
+system@ubuntu:~/.ssh$
+{% endhighlight %}
