@@ -3,7 +3,7 @@ layout: post
 title: Bash proxy and https error
 categories: 
  - blog
-date: 
+date: 2015-11-04 11:42:29
 
 ---
 

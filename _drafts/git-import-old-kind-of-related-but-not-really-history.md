@@ -3,7 +3,7 @@ layout: post
 title: Git import old kind of related but not really history
 categories: 
  - blog
-date: 
+date: 2015-12-01 14:17:24
 
 ---
 

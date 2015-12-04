@@ -3,7 +3,7 @@ layout: post
 title: Keeping the java jdk up to date
 categories: 
  - blog
-date: 
+date: 2015-12-01 14:17:24
 
 ---
 

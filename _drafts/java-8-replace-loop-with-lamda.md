@@ -3,7 +3,7 @@ layout: post
 title: Java 8 replace loop with lamda
 categories: 
  - blog
-date: 
+date: 2015-12-01 14:17:24
 
 ---
 

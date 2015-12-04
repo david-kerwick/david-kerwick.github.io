@@ -3,7 +3,7 @@ layout: post
 title: Comparing property files on linux
 categories: 
  - blog
-date: 
+date: 2015-12-01 14:17:24
 
 ---
 
