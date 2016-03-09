@@ -26,3 +26,5 @@ First off add the new jdk to the to the main preferences and set it as the defau
 Then to change all projects
 ![Java Environment](/assets/img/keeping-the-java-jdk-up-to-date/Java_environment.png)
 
+Depending on the size of your eclipse workspace site back and enjoy the sweet sound of fans kicking in as it rebuilds all projects.
+

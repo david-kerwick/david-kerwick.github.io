@@ -13,10 +13,10 @@ So one of these is converting some loops to lamda's, when the loops are doing ex
 
 {% highlight java %}
 HashMap<String, String> propMap = new HashMap<>();
-for (PcrsUserPropVo pcrsUserPropVo : properties) {
-    if (StringUtils.isNotEmpty(pcrsUserPropVo.getPropId())
-            && StringUtils.isNotEmpty(pcrsUserPropVo.getValue())) {
-        propMap.put(pcrsUserPropVo.getPropId(), pcrsUserPropVo.getValue());
+for (TestObject testObject : properties) {
+    if (StringUtils.isNotEmpty(testObject.getPropId())
+            && StringUtils.isNotEmpty(testObject.getValue())) {
+        propMap.put(testObject.getPropId(), testObject.getValue());
     }
 }
 {% endhighlight %}
@@ -27,7 +27,7 @@ Can be turned into this
  Map<String, String> propMap = properties
         .stream()
         .filter(prop -> StringUtils.isNotEmpty(prop.getPropId()) && StringUtils.isNotEmpty(prop.getValue()))
-        .collect(Collectors.toMap(PcrsUserPropVo::getPropId, PcrsUserPropVo::getValue));
+        .collect(Collectors.toMap(TestObject::getPropId, TestObject::getValue));
 {% endhighlight %}
 
 Better? Well that's up for debate I think, it's a bit cleaner once you speak lamda I guess

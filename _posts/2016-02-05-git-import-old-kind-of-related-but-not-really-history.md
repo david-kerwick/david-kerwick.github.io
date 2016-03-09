@@ -7,7 +7,7 @@ date: 2015-12-01 14:17:24
 
 ---
 
-So someo the projects I've work on for a while have has various version control systems used, VSS, SVN and now GIT.  The fun here is not all imports have gone that well, there has been upgrade that happened in a different project because branches weren't very good (VSS) or the project has be moved and renamed (SVN) so now that it's landed in GIT I thought I try tie them togther in one repo, before they were always in the big giant repo.
+So some of the projects I've work on for a while have had various version control systems used, VSS, SVN and now GIT.  The fun here is not all imports have gone that well, there has been upgrades that happened in a different project because branches weren't very good (VSS) or the project has be moved and renamed (SVN) so now that it's landed in GIT I thought I try tie them togther in one repo, before they were always in the big giant repo.
 
 The problem is as far as git is concerned they have nothing in common. The VSS is completely seperate and with SVN the SVN to GIT import doesn't follow renames, so they are seperate too.
 

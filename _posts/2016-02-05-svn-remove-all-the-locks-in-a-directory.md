@@ -7,9 +7,9 @@ date: 2015-12-04 15:36:52
 
 ---
 
-I was archiving old projects as we are moving to from svn to git. But I keep coming across old locks, sometimes very old the developer had left.
+I was archiving old projects as we are moving to from svn to git. But I keep coming across old locks, sometimes very old - the developer had left.
 
-It was proving a bit of a pain find each of the files an unlocking them.
+It was proving a bit of a pain finding each of the files and unlocking them.
 I also didn't want to checkout all the repos involved.
 
 The way I ended up doing it requires access to the svn server
