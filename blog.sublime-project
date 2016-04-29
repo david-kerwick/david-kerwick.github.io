@@ -9,8 +9,8 @@
     {
         "Jekyll":
 	    {
-	        "posts_path": "/Users/David/Dropbox/david-kerwick-blog/_posts/",
-	        "drafts_path": "/Users/David/Dropbox/david-kerwick-blog/_drafts/",
+	        "jekyll_posts_path": "/Users/David/Dropbox/david-kerwick-blog/_posts/",
+	        "jekyll_drafts_path": "/Users/David/Dropbox/david-kerwick-blog/_drafts/",
 	        "default_post_layout": "post",
 	        "default_post_categories":null,
 	        "default_post_published":null,
