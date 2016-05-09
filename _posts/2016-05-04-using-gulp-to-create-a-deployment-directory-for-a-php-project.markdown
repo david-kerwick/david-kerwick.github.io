@@ -1,6 +1,7 @@
 ---
 title: Using Gulp to create a 'deployment' directory for a php project
 layout: post
+date: 2016-05-04 10:20:15
 ---
 The PHP project I'm looking at doesn't have a 'deployment' process.  The advantage of interpreted languages I guess. The whole thing can be shipped to the production server, but that also means alot of files that don't need to be on the server are on the server.  This does not sit well with my brain. So I think it's time to create a folder for just deployment files and have the needed files copied to that folder.
 
@@ -22,8 +23,7 @@ Then install gulp as a dev dependency.
 npm install gulp --save-dev
 {% endhighlight %}
 
-Next create a gulpfile.js in the project root
-Copying files it Gulp is very straight forward as two of the main api's deal with getting files `gulp.src` and writing them out `gulp.dest`
+Next create a gulpfile.js in the project root.  Copying files in Gulp is very straight forward as two of the main api's deal with getting files `gulp.src` and writing them out `gulp.dest`
 So you copy the application folder to a dist directory you could use the below code. 
 {% highlight javascript %}
 gulp.task('dist-app', function () {
