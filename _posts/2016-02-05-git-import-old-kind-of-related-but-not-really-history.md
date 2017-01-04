@@ -68,3 +68,9 @@ Then I needed to replace the new blank commit with the end of the old commit, wh
 git replace "5b4e4e2" "6577477"
 {% endhighlight %}
 
+Update
+So to make that change permanent in the history you can run
+{% highlight bash %}
+git filter-branch -f --tag-name-filter cat -- --all
+{% endhighlight %}
+
