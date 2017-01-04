@@ -1,6 +1,7 @@
 ---
 title: Combining zsh history files
 layout: post
+date: "2017-01-04 19:38:07 +0000"
 ---
 So more and more I seem to be looking for that command I typed before. The one with the secret magic sauce to get something to work, long winded Docker run commands and such. And more and more it seems to be on another computer, if I'm on the laptop it's on the desktop etc...
 
@@ -58,6 +59,4 @@ Once you are happy with the output you can then pipe the results to a file by ad
 
 And finally cp / mv that file to your .zsh_history
 
-One possible gotcha when I was testing this. Lines started being removed from the .zsh_history file, so I thought the sort was doing mad things.  In fact I just breached the HISTSIZE limit and zsh was trimming the file. So probably worth increasing that by a factor of the number of computers you are syncing.
-
-
+One possible gotcha when I was testing this. Lines started being removed from the .zsh_history file, so I thought the sort was doing mad things.  In fact I just breached the HISTSIZE limit and zsh was trimming the file. So probably worth increasing that by a multiple of the number of computers you are syncing.

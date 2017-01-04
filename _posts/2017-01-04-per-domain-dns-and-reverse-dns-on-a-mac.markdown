@@ -1,6 +1,7 @@
 ---
 title: Per Domain DNS and reverse DNS on a Mac
 layout: post
+date: "2017-01-04 18:38:07 +0000"
 ---
 So following on from my fairly old post about static routes on a Mac, in the process of setting up a new machine I realised I solved another DNS issue back then that I never really documented.
 
