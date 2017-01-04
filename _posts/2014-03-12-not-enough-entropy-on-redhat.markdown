@@ -3,7 +3,7 @@ layout: post
 title: Not enough entropy on RedHat
 date: '2014-03-12T20:59:00.000Z'
 author: David
-tags: 
+tags:
 modified_time: '2014-03-31T21:53:28.621+01:00'
 blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-3776705068099286637
 blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/not-enough-entropy-on-redhat.html
@@ -26,7 +26,7 @@ Every 2.0s: cat /proc/sys/kernel/random/entropy_avail  Wed Mar 12 18:50:13 2014
 Not alot available
 
 {% highlight bash %}  
-	rngd -r /dev/urandom -o /dev/random
+rngd -r /dev/urandom -o /dev/random
 {% endhighlight %}
 
 Much better
@@ -56,7 +56,7 @@ edit
 vi /etc/sysconfig/rngd  
 {% endhighlight %}
 
- 
+
 Replace the EXTRAOPTIONS with  
 
 

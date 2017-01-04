@@ -16,7 +16,7 @@ If you are flattening your dev Weblogic server regularly you might want to have 
 
 Here is one you can use as the basis  
 
-{% highlight python %} 
+{% highlight python %}
 if __name__ == '__main__':  
     from wlstModule import *  
 
@@ -75,7 +75,7 @@ jndiList='jdbc/whatever','jdbc/whomever','jdbc/etc'
 create_datasource('who_ds', 'who_ds_pw', jndiList)  
 
 #create an array for the datasource  
-jndiList=['jdbc/curly','jdbc/larry','jdbc/moo']  
+jndiList=['jdbc/curly','jdbc/larry','jdbc/moe']  
 create_datasource('stooges', 'stooges_pw', jndiList)  
 
 save()  

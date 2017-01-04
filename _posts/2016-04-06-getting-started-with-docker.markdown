@@ -4,10 +4,10 @@ layout: post
 date: 2016-04-06 14:07:16
 ---
 
-#Intro
+# Intro
 So I needed to set up a machine for php development but rather than use a server I reckoned now would be a good time to try and set up Docker so that the server will be local, I can easily bring it up and down, change config, lightning fast and all the other things Docker promises.
 
-#Installation
+# Installation
 Docker has the installation pretty well covered as you can imagine
 <https://docs.docker.com/mac/>
 
@@ -57,14 +57,14 @@ So run what it tells you to run in order to set the terminal up for docker comma
 eval $(docker-machine env)
 {% endhighlight %}
 
-#Test It
+# Test It
 If everything worked you can test it with
 {% highlight bash %}
 docker run hello-world
 {% endhighlight %}
 Which will print a hello from Docker.
 
-#Shell Completion
+# Shell Completion
 So as you may know I use the ZSH shell with Oh-My-Zsh.  	
 It has command auto completion for docker.
 Open up your .zshrc and find the line for plugins
@@ -72,5 +72,3 @@ And add docker to it, for example
 {% highlight bash %}
 plugins=(git mvn z history-substring-search docker)
 {% endhighlight %}
-
-

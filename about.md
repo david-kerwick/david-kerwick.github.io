@@ -9,4 +9,3 @@ permalink: /about/
 <p>
   I'm the guy not the ball
 </p>
-

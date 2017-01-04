@@ -15,8 +15,7 @@ So I ended up with several posts on setting up weblogic.
 I thought it would be best to have a page that collects them together and to put the scripts mentioned onto github.  
 
 #### Machine setup and initial notes
-
-[Setting up the entropy pool on Red Hat if needed](http://davidkerwick.blogspot.ie/2014/03/not-enough-entropy-on-redhat.html?view=classic)
+[Setting up the entropy pool on Red Hat if needed]({% post_url 2014-03-12-not-enough-entropy-on-redhat %})
 
 [Setting the type of random used is WLST is slow](http://davidkerwick.blogspot.ie/2014/03/really-slow-wlst-and-adminserver-start.html?view=classic)
 

@@ -17,7 +17,8 @@ What I ended up with was an init.d script and a set of wlst scripts for starting
 
 First create the init.d script  
 
-{% highlight bash %} cd /etc/init.d  
+{% highlight bash %}
+cd /etc/init.d  
 vi nodemgr  
 {% endhighlight %}
 
