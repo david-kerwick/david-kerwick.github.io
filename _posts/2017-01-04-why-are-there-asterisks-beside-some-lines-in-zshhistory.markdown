@@ -1,6 +1,7 @@
 ---
 title: Why are there asterisks beside some lines in .zsh_history
 layout: post
+date: "2017-01-04 17:38:07 +0000"
 ---
 So
 {% highlight bash %}
@@ -22,3 +23,10 @@ So
 {% endhighlight %}
 
 What's with the asterisk on some lines?
+
+Turns out it means the line has being modified
+from the manual [here](https://www.gnu.org/software/bash/manual/bashref.html#Readline-Init-File-Syntax-1) it says
+
+> mark-modified-lines
+>
+> This variable, when set to ‘on’, causes Readline to display an asterisk (‘*’) at the start of history lines which have been modified. This variable is ‘off’ by default.
