@@ -2,12 +2,8 @@
 layout: post
 title: Ubuntu can't apt-get upgrade because boot partition is full
 date: '2014-04-23T21:11:00.001+01:00'
-author: David
-tags: 
-modified_time: '2014-04-23T21:13:42.932+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2573224521948148034
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/ubuntu-cant-apt-get-upgrade-because.html
-
+author: David Kerwick
+tags:
 ---
 When trying to do an upgrade I got the error below
 
@@ -52,7 +48,7 @@ If you do a df you will probably see your boot partition is full.
 
 Freeing up space seems to be no fun, to find the list of old images
 
-{% highlight bash %} 
+{% highlight bash %}
 sudo dpkg --list | grep linux-image  
 
 ii linux-image-3.2.0-41-generic 3.2.0-41.66 Linux kernel image for version 3.2.0 on 64 bit x86 SMP  
@@ -119,11 +115,11 @@ No apport report written because the error message indicates its a followup erro
  linux-server  
 E: Sub-process /usr/bin/dpkg returned an error code (1)  
 {% endhighlight %}
-  
+
 I'm not admin as you may have guessed but it's a virtual server and I took a snapshot, anyway time to get nuclear on it.  
 
 
-{% highlight bash %} 
+{% highlight bash %}
 sudo dpkg --remove --force-remove-reinstreq linux-image-server  
 sudo dpkg --remove --force-remove-reinstreq linux-headers-server  
 sudo dpkg --remove --force-remove-reinstreq linux-server  
@@ -131,7 +127,7 @@ sudo dpkg --remove --force-remove-reinstreq linux-server
 
 Then run -f install again
 
-{% highlight bash %} 
+{% highlight bash %}
 sudo apt-get -f install  
 Reading package lists... Done  
 Building dependency tree   
@@ -162,7 +158,7 @@ Reading state information... Done
 
 You should now be in a happy state again, I found the below which should purge all the remaining old images, you might need to modify it if you want to keep more than the current
 
-{% highlight bash %} 
+{% highlight bash %}
 sudo apt-get purge $(dpkg -l linux-{image,headers}-"[0-9]*" | awk '/ii/{print $2}' | grep -ve "$(uname -r | sed -r 's/-[a-z]+//')")  
 {% endhighlight %}
 

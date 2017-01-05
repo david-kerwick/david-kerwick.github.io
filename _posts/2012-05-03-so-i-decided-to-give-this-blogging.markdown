@@ -2,12 +2,8 @@
 layout: post
 title: Blogger Getting Started
 date: '2012-05-03T21:28:00.000+01:00'
-author: David
-tags: 
+author: David Kerwick
 modified_time: '2014-02-07T21:28:51.976Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-9137449142306761871
-blogger_orig_url: http://davidkerwick.blogspot.com/2012/05/so-i-decided-to-give-this-blogging.html
-
 ---
 
 <div class="note info">

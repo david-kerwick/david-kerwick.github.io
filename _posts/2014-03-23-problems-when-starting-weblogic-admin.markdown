@@ -2,20 +2,16 @@
 layout: post
 title: Problems when starting the Weblogic admin server
 date: '2014-03-23T23:04:00.003Z'
-author: David
+author: David Kerwick
 tags:
 - weblogic
-modified_time: '2014-03-27T20:38:03.990Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-7898399674738405313
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/problems-when-starting-weblogic-admin.html
-
 ---
 
 If you have been following my little series on installing weblogic or you have used the configuration wizard and encounter the error below when trying to start the server with the startWeblogic.sh script I detail a possible cause and solution below  
 
 First here is the error you will get  
 
-{% highlight java %} 
+{% highlight java %}
 <23-Mar-2014 21:46:08 o'clock GMT> <Error> <Security> <BEA-090870> <The realm "myrealm" failed to be loaded: weblogic.security.service.SecurityServiceException: java.lang.ExceptionInInitializerError.  
 weblogic.security.service.SecurityServiceException: java.lang.ExceptionInInitializerError  
  at weblogic.security.service.CSSWLSDelegateImpl.initializeServiceEngine(CSSWLSDelegateImpl.java:341)  
@@ -65,7 +61,7 @@ The problem can be caused by weblogic not been able to look up your hostname. So
 myhost.mydomain.ie' this needs to be resolvable.  
 So on Redhat set the hostname in  
 
-`/etc/sysconfig/network` 
+`/etc/sysconfig/network`
 
 
 and have an entry in  

@@ -2,14 +2,14 @@
 layout: post
 title: Connecting to Nodemanager using WLST in production mode
 date: '2014-03-27T21:53:00.001Z'
-author: David
+author: David Kerwick
 tags:
 - wlst
 - weblogic
 modified_time: '2014-04-23T22:10:56.201+01:00'
 thumbnail: http://3.bp.blogspot.com/-OWRuJln6qs4/UzSb23NmjcI/AAAAAAAAFKs/9nkAn1OlsJw/s72-c/nodemanager_prod_1.jpg
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-1234743456356966126
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/connecting-to-nodemanager-using-wlst-in.html
+
+
 
 ---
 

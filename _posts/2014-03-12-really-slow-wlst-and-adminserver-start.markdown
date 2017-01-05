@@ -2,17 +2,12 @@
 layout: post
 title: Really slow wlst and adminserver start on weblogic
 date: '2014-03-12T21:47:00.000Z'
-author: David
+author: David Kerwick Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-03-23T21:42:19.494Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-6105794210527833698
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/really-slow-wlst-and-adminserver-start.html
-
 ---
-
-As an alternative to my post [here](http://davidkerwick.blogspot.ie/2014/03/not-enough-entropy-on-redhat.html) instead of feeding /dev/random with data from /dev/urandom you can switch the weblogic components only.
+As an alternative to my post [here]({% post_url 2014-03-12-not-enough-entropy-on-redhat %}) instead of feeding /dev/random with data from /dev/urandom you can switch the weblogic components only.
 
 Modify wlsh.sh  
 Look for the line  

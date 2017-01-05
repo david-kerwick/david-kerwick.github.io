@@ -2,13 +2,9 @@
 layout: post
 title: IIS weblogic proxy and Weblogic plugin enabled
 date: '2014-03-24T14:40:00.000Z'
-author: David
+author: David Kerwick
 tags:
 - weblogic
-modified_time: '2014-03-24T14:40:19.292Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2857585544300264902
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/iis-weblogic-proxy-and-weblogic-plugin.html
-
 ---
 
 If you have IIS in front of your Weblogic cluster you are probably familiar with the 'WebLogic Plug-In Enabled:' feature on Weblogic server. This allows the access logs and calls to `getRemoteAddr()` to return the IP address of the client rather than the IP of the webserver, which is where the request has come from.  

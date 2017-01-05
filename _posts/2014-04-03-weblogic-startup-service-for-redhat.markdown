@@ -2,13 +2,9 @@
 layout: post
 title: Weblogic startup service for RedHat
 date: '2014-04-03T22:58:00.002+01:00'
-author: David
+author: David Kerwick
 tags:
 - weblogic
-modified_time: '2014-04-23T22:09:55.719+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-3498260207170789428
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/weblogic-startup-service-for-redhat.html
-
 ---
 
 I want to create a startup service for Weblogic on RedHat so that when the machine started all the Weblogic components I wanted would be started. So that's the nodemanager, the AdminServer and the servers in the dynamic cluster.  

@@ -2,23 +2,20 @@
 layout: post
 title: Create new Weblogic Domain using wlst
 date: '2014-03-19T22:38:00.000Z'
-author: David
+author: David Kerwick Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-04-03T22:39:52.348+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2666436262490330587
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/create-new-weblogic-domain-using-wlst.html
 ---
 
-  
+
 If you rather create the domain yourself instead of using the configuration wizard you can use wlst. You don't have to configure everything, you can use the Weblogic provided basic template. Details of what it comes with can be found [here](http://docs.oracle.com/middleware/1212/wls/WLDTR/templates.htm#i1115503)  
 
 You can go with the all the defaults it supplies or you can create a script that reads in this basic template and then customise it to your needs, this can be quite useful for development and it allows you to easily delete and recreate the same domain.  
 
 Here is one I've used, I'll go through the sections under the code.  
 
-{% highlight python %} 
+{% highlight python %}
 if __name__ == '__main__':  
     from wlstModule import *  
 
@@ -86,8 +83,8 @@ Run it
 
 So if say you save this file as create_domain.py you can run it by  
 
-{% highlight bash %} 
+{% highlight bash %}
 /home/weblogic/Oracle/Middleware/Oracle_Home/oracle_common/common/bin/wlst.sh create_domain.py  
 {% endhighlight %}
 
-If this runs really slow have a look at my other blog post [here](http://davidkerwick.blogspot.ie/2014/03/really-slow-wlst-and-adminserver-start.html)
+If this runs really slow have a look at my other blog post [here]({% post_url 2014-03-12-really-slow-wlst-and-adminserver-start %})

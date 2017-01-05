@@ -2,12 +2,7 @@
 layout: post
 title: Problem with cmo object in wlst script
 date: '2014-04-07T19:29:00.001+01:00'
-author: David
-tags: 
-modified_time: '2014-04-07T19:29:09.400+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2248551653630185185
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/problem-with-cmo-object-in-wlst-script.html
-
+author: David Kerwick
 ---
 
 Do you have a script that's giving the error below?  

@@ -2,14 +2,10 @@
 layout: post
 title: WLST health check script for weblogic
 date: '2014-04-07T20:43:00.003+01:00'
-author: David
+author: David Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-04-23T22:10:56.207+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-4891606805694147255
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/wlst-health-check-script-for-weblogic.html
-
 ---
 
 A script that checks the 'health' of weblogic managed servers or admin server and restarts them if required.  

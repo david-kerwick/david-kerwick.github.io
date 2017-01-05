@@ -2,13 +2,7 @@
 layout: post
 title: Http 400 Error Submitting a Form With Errors With Spring
 date: '2015-01-19T20:47:00.001Z'
-author: David
-tags:
-modified_time: '2015-01-19T20:47:29.661Z'
-thumbnail: http://1.bp.blogspot.com/-TrReH9mnDcs/VL1pze7ZqWI/AAAAAAAAFYA/J4WHLQ8WSP8/s72-c/Screen%2BShot%2B2015-01-19%2Bat%2B20.28.33.png
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-5946017471358651403
-blogger_orig_url: http://davidkerwick.blogspot.com/2015/01/http-400-error-submitting-form-with.html
-
+author: David Kerwick
 ---
 
 So I got a http 400 error when testing a form I thought used to work.  

@@ -2,12 +2,7 @@
 layout: post
 title: The Highlighter Fight Continues
 date: '2015-01-05T16:46:00.001Z'
-author: David
-tags: 
-modified_time: '2015-01-05T16:46:31.936Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2388746902947881376
-blogger_orig_url: http://davidkerwick.blogspot.com/2015/01/the-highlighter-fight-continues.html
-
+author: David Kerwick
 ---
 So I've tried a the whole highlight code thing and had it working for a time.  But I noticed it has stopped working again.  
 

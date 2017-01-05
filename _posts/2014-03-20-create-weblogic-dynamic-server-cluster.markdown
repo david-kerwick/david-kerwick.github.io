@@ -2,21 +2,17 @@
 layout: post
 title: Create a Weblogic dynamic server cluster using WLST
 date: '2014-03-20T23:06:00.002Z'
-author: David
+author: David Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-04-03T22:42:07.822+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-6230491799187399695
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/create-weblogic-dynamic-server-cluster.html
-
 ---
 
 Continuing my little series of posts on using wlst, [how to create a domain]( {% post_url 2014-03-19-create-new-weblogic-domain-using-wlst %}) and [how to add a machine]( {% post_url 2014-03-20-create-machine-for-weblogic-with-wlst %}) the below will set up a dynamic server cluster.  This is a new feature for Weblogic 12C 12.1.2.  
 
 You can find more details on the dynamic cluster [here](http://docs.oracle.com/middleware/1212/wls/INTRO/clustering.htm#BABJGIBI).  In brief it allows you to grow and shrink the number of available managed servers, with each managed server based on a template.
 
-{% highlight python %} 
+{% highlight python %}
 if __name__ == '__main__':  
     from wlstModule import *  
 

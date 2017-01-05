@@ -2,14 +2,10 @@
 layout: post
 title: WLST to auto undeploy retired apps
 date: '2014-04-08T22:04:00.001+01:00'
-author: David
+author: David Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-04-23T22:10:56.210+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-7790910204850999058
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/wlst-to-auto-undeploy-retired-apps.html
-
 ---
 
 So something that annoys me is having to clean up retired applications, I generally discover them because the deploy fails as the retired app is still present.  

@@ -2,13 +2,13 @@
 layout: post
 title: Local host not known error when running wlst scripts
 date: '2014-03-27T18:57:00.001Z'
-author: David
+author: David Kerwick
 tags:
 - wlst
 - weblogic
 modified_time: '2014-04-23T22:10:56.204+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2986353348164570398
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/local-host-not-known-error-when-running.html
+
+
 
 ---
 

@@ -2,18 +2,14 @@
 layout: post
 title: 'Weblogic out of permgen '
 date: '2014-04-07T22:58:00.002+01:00'
-author: David
+author: David Kerwick
 tags:
 - weblogic
-modified_time: '2014-04-23T22:09:55.711+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-1037902420020183005
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/weblogic-out-of-permgen.html
-
 --- 
 
 If you are getting out of memory errors such as  
 
-{% highlight java %} 
+{% highlight java %}
 ####<Apr 7, 2014 10:50:45 PM IST> <Error> <JMX> <myhost.mydomain.ie> <my-server-1> <[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <> <1396907445484> <BEA-149501> <An exception occurred while registering the MBean com.bea:Name=AdminServer,Type=WebServiceBuffering,Server=AdminServer,WebService=AdminServer at property WebServiceRequestBufferingQueue.  
 java.lang.OutOfMemoryError: PermGen space  
  at java.lang.ClassLoader.defineClass1(Native Method)  

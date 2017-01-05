@@ -2,12 +2,7 @@
 layout: post
 title: Getting an Oracle Sequence in Spring
 date: '2015-01-19T21:38:00.000Z'
-author: David
-tags: 
-modified_time: '2015-01-19T21:38:14.842Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-3377114735126612980
-blogger_orig_url: http://davidkerwick.blogspot.com/2015/01/getting-oracle-sequence-in-spring.html
-
+author: David Kerwick
 ---
 
 Ok so this one is a bit of lead in but no harm in it by itself.  

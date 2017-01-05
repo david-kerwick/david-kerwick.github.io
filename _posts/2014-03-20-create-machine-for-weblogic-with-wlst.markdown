@@ -2,19 +2,15 @@
 layout: post
 title: Create a 'machine' for Weblogic with WLST
 date: '2014-03-20T22:36:00.000Z'
-author: David
+author: David Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-04-03T22:40:29.112+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-6599294441738696385
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/create-machine-for-weblogic-with-wlst.html
-
 ---
 
 Following on from my [post]( {% post_url 2014-03-19-create-new-weblogic-domain-using-wlst %}) on creating a domain using WLST here is how to create a machine on the weblogic server.  
 
-{% highlight python %} 
+{% highlight python %}
 if __name__ == '__main__':  
     from wlstModule import *  
 

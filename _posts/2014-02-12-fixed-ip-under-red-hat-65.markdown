@@ -2,12 +2,9 @@
 layout: post
 title: Fixed IP under Red Hat 6.5
 date: '2014-02-12T12:03:00.003Z'
-author: David
-tags: 
+author: David Kerwick
+tags:
 modified_time: '2014-02-12T12:03:53.706Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-4109676067870396543
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/02/fixed-ip-under-red-hat-65.html
-
 ---
 
 I have a Red Hat test server I needed to set up with a fixed IP address.  Handy info with a good bit of info available so just a memory dump for handy reference.  

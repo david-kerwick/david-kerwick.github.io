@@ -2,12 +2,7 @@
 layout: post
 title: 'Bash scripting square brackets and ampersands '
 date: '2014-04-03T14:39:00.000+01:00'
-author: David
-tags: 
-modified_time: '2014-04-03T14:39:51.730+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-6950441359672593999
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/bash-scripting-square-brackets-and.html
-
+author: David Kerwick
 ---
 
 So I'm trying to create a startup script for Weblogic on Redhat.  
@@ -18,11 +13,11 @@ I'll hopefully have the actual script in a later post but for now I noticed alot
 
 For the start function  
 
-{% highlight bash %} [ ${RETVAL} -eq 0 ] && touch ${LOCKFILE}{% endhighlight %} 
+{% highlight bash %} [ ${RETVAL} -eq 0 ] && touch ${LOCKFILE}{% endhighlight %}
 
 For the stop function   
 
-{% highlight bash %} [ ${RETVAL} -eq 0 ] && rm -f ${LOCKFILE}{% endhighlight %} 
+{% highlight bash %} [ ${RETVAL} -eq 0 ] && rm -f ${LOCKFILE}{% endhighlight %}
 
 So creation and removal of the lock file, problem for me was I didn't quite understand what it was doing exactly, examples and tutorials kind of gloss over it as something to basic to explain, which is fair enough it is a basic built in function, I just didn't know about it.  
 
@@ -34,4 +29,4 @@ So the above line is a shortcut for
 {% highlight bash %} if [${RETVAL} -eq 0]; then  
    touch ${LOCKFILE}  
 fi  
-{% endhighlight %} 
+{% endhighlight %}

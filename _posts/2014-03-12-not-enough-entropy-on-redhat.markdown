@@ -2,12 +2,8 @@
 layout: post
 title: Not enough entropy on RedHat
 date: '2014-03-12T20:59:00.000Z'
-author: David
-tags:
+author: David Kerwick
 modified_time: '2014-03-31T21:53:28.621+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-3776705068099286637
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/not-enough-entropy-on-redhat.html
-
 ---
 
 ### Chaos is good....

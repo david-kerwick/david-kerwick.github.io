@@ -2,13 +2,7 @@
 layout: post
 title: Exclude Generated Files From Sonar Analysis
 date: '2015-01-26T22:08:00.003Z'
-author: David
-tags: 
-modified_time: '2015-01-26T22:11:38.939Z'
-thumbnail: http://3.bp.blogspot.com/-xB4NbBujIoE/VMa4_XnJBRI/AAAAAAAAFYg/jFdrACYsVXg/s72-c/sonar_login.png
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-8599960073128350618
-blogger_orig_url: http://davidkerwick.blogspot.com/2015/01/exclude-generated-files-from-sonar.html
-
+author: David Kerwick
 ---
 
 I use SonarQube to scan my projects and check for issues.  One of the things you don't want is it reporting on issues in files you didn't create.  For example I don't think there's much point in reporting issues in JAXB generated content.  
@@ -42,4 +36,3 @@ The default password is admin/admin
 [![](http://4.bp.blogspot.com/-rq1NYFKDd_M/VMa4-sVateI/AAAAAAAAFYY/XCsok6Zdkxg/s1600/sonar_ignore.png)](http://4.bp.blogspot.com/-rq1NYFKDd_M/VMa4-sVateI/AAAAAAAAFYY/XCsok6Zdkxg/s1600/sonar_ignore.png)
 
  You can add as many pattern's as you like  
-

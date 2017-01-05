@@ -2,14 +2,10 @@
 layout: post
 title: Create datasources for weblogic using WLST
 date: '2014-03-23T18:42:00.000Z'
-author: David
+author: David Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-04-03T22:43:26.505+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2361511894501527125
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/create-datasources-for-weblogic-using.html
-
 ---
 
 If you are flattening your dev Weblogic server regularly you might want to have your datasources in a wlst file so you can re run it every time.  

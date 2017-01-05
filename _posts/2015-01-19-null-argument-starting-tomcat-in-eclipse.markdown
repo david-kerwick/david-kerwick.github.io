@@ -2,12 +2,7 @@
 layout: post
 title: Null Argument Starting Tomcat in Eclipse
 date: '2015-01-19T20:16:00.004Z'
-author: David
-tags: 
-modified_time: '2015-01-19T20:16:44.814Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-6729373182965088600
-blogger_orig_url: http://davidkerwick.blogspot.com/2015/01/null-argument-starting-tomcat-in-eclipse.html
-
+author: David Kerwick
 ---
 
 Every now and again I've start getting error's when trying to start Tomcat from within Eclipse.  
@@ -59,7 +54,7 @@ and delete the tmp folders to find there.
 
 Go to the 'instance' folder, I think this changes depending on your install I'm actually using vFabric server so it's under the folder the server is extracted to so something like  
 
-`vfabric-tc-server-developer-2.9.6.RELEASE/base-instance/ ` 
+`vfabric-tc-server-developer-2.9.6.RELEASE/base-instance/ `
 
 I think raw Tomcat would be under /.metadata/.plugins/ somewhere  
 

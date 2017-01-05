@@ -2,12 +2,7 @@
 layout: post
 title: Getting Oracle Sequences in bulk
 date: '2015-01-19T22:06:00.002Z'
-author: David
-tags: 
-modified_time: '2015-01-19T22:13:33.053Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-7239561773211785317
-blogger_orig_url: http://davidkerwick.blogspot.com/2015/01/getting-oracle-sequences-in-bulk.html
-
+author: David Kerwick
 ---
 
 So following on from getting [one value from a sequence]({% post_url 2015-01-19-getting-oracle-sequence-in-spring %}) what if you want to get alot of sequences in bulk.  So you could get them as and when you need them or you could loop the number of times to need and call the OracleSequenceMaxValueIncrementer each time.  

@@ -2,12 +2,8 @@
 layout: post
 title: Google Code Prettify - Add a Theme
 date: '2012-05-03T22:20:00.000+01:00'
-author: David
-tags: 
+author: David Kerwick
 modified_time: '2012-05-03T22:44:51.225+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-5824526427310716272
-blogger_orig_url: http://davidkerwick.blogspot.com/2012/05/google-code-prettify-add-theme.html
-
 ---
 <div class="note info">
   <h5>I'm not on Blogger anymore</h5>

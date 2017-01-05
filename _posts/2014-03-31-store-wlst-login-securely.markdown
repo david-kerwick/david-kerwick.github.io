@@ -2,13 +2,10 @@
 layout: post
 title: Store WLST login securely
 date: '2014-03-31T21:59:00.000+01:00'
-author: David
+author: David Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-04-03T22:37:14.330+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-3106284650556018227
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/store-wlst-login-securely.html
 ---
 
 If you have started writing several wlst scripts for various functions you are probably happy to store the username and password in the script directly while doing dev setup actions.  If you have started writing scripts that run against production to check the health of the servers or something like that you are probably wondering about a better way to store them.  
@@ -21,11 +18,11 @@ Start up wlst
 
 Connect to the admin server using your username and password  
 
-{% highlight python %} 
+{% highlight python %}
 connect('weblogic', 'weblogic1', 't3://myhost.mydomain.ie:7001')
 {% endhighlight %}
 
-{% highlight python %} 
+{% highlight python %}
 Connecting to t3://myhost.mydomain.ie:7001 with userid weblogic ...  
 Successfully connected to Admin Server "AdminServer" that belongs to domain "my_domain".  
 
@@ -36,7 +33,7 @@ Admin port should be used instead.
 
 Run  
 
-{% highlight python %} 
+{% highlight python %}
 storeUserConfig('/home/weblogic/user_projects/domains/my_domain/adminServerConfig.secure', '/home/weblogic/user_projects/domains/my_domain/adminServerKey.secure')  
 
 Creating the key file can reduce the security of your system if it is not kept in a secured location after it is created. Do you want to create the key file? y or n y  
@@ -47,16 +44,16 @@ Or whatever directory and filename you want, maybe your user directory if you wa
 
 You should now be able to connect using  
 
-{% highlight python %} 
+{% highlight python %}
 connect(userConfigFile='/home/weblogic/user_projects/domains/my_domain/adminServerConfig.secure', userKeyFile='/home/weblogic/user_projects/domains/my_domain/adminServerKey.secure', url='t3://myhost.mydomain.ie:7001')  
 {% endhighlight %}
 
 you can do the same for the nodemanager  
 
-{% highlight python %} 
+{% highlight python %}
 nmConnect('weblogic', 'weblogic1', 'myhost.mydomain.ie', '5556', 'my_domain', '/home/weblogic/user_projects/domains/my_domain', 'plain')  
 {% endhighlight %}
 
-{% highlight python %} 
+{% highlight python %}
 storeUserConfig(userConfigFile='/home/weblogic/user_projects/domains/my_domain/nodemanagerConfig.secure', userKeyFile='/home/weblogic/user_projects/domains/my_domain/nodemanagerKey.secure', nm='true')  
 {% endhighlight %}

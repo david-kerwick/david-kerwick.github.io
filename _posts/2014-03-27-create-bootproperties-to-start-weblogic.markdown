@@ -2,12 +2,12 @@
 layout: post
 title: Create boot.properties to start weblogic admin server
 date: '2014-03-27T18:53:00.002Z'
-author: David
+author: David Kerwick
 tags:
 - weblogic
 modified_time: '2014-03-27T18:53:24.771Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-4462359699505801197
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/create-bootproperties-to-start-weblogic.html
+
+
 ---
 
 So you have been starting the admin server using the startWeblogic.sh script and you are tired of entering the username and password each time.  You want the credentials stored, this can be done by creating a boot.properties file where the admin server will take the credentials.  

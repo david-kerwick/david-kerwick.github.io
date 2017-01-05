@@ -2,12 +2,8 @@
 layout: post
 title: Remove the social buttons from Blogger Dynamic Views
 date: '2014-02-08T00:02:00.003Z'
-author: David
-tags: 
+author: David Kerwick
 modified_time: '2014-02-08T00:11:15.167Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-3722182296996473487
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/02/remove-social-buttons-from-blogger.html
-
 ---
 
 <div class="note info">

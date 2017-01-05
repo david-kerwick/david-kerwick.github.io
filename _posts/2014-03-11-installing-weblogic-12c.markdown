@@ -2,13 +2,9 @@
 layout: post
 title: Installing Weblogic 12c
 date: '2014-03-11T21:02:00.003Z'
-author: David
+author: David Kerwick
 tags:
-- weblogic
-modified_time: '2014-03-23T21:42:33.589Z'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-2477197816782020800
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/installing-weblogic-12c.html
-
+  - weblogic
 ---
 
 ## Installing Weblogic 12c.
@@ -117,7 +113,7 @@ at oracle.sysman.oio.oioc.OiocOneClickInstaller.main(OiocOneClickInstaller.java:
 
 So best to log on to the server with a gui present and run
 
-{% highlight bash %} 
+{% highlight bash %}
 java -jar wls_121200.jar  
 {% endhighlight %}
 

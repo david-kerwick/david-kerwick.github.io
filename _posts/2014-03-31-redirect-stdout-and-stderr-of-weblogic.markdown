@@ -2,19 +2,15 @@
 layout: post
 title: Redirect stdout and stderr of Weblogic managed servers
 date: '2014-03-31T22:03:00.001+01:00'
-author: David
+author: David Kerwick
 tags:
 - weblogic
-modified_time: '2014-04-23T22:09:55.722+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-4859053817041876213
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/redirect-stdout-and-stderr-of-weblogic.html
-
 ---
 
 As you may have noticed Weblogic is fond of having two log files for each server. A *.out and a *.log. If you have customised the 'Log file name:' of your server you may also wish to move the location and name of these '.out' files.  
 You can do this by setting the two values below in the server start arguments  
 
-{% highlight bash %} 
+{% highlight bash %}
 -Dweblogic.Stdout=${serverName}_%yyyy%_%MM%_%dd%_%hhmm%.log  
 -Dweblogic.Stderr=${serverName}_%yyyy%_%MM%_%dd%_%hhmm%.log  
 {% endhighlight %}

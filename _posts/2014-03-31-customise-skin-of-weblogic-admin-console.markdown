@@ -2,13 +2,9 @@
 layout: post
 title: Customise the skin of weblogic admin console
 date: '2014-03-31T21:26:00.000+01:00'
-author: David
+author: David Kerwick
 tags:
 - weblogic
-modified_time: '2014-04-23T22:09:55.716+01:00'
-thumbnail: http://1.bp.blogspot.com/-326jiFs7_yg/UznMOs5gDmI/AAAAAAAAFLM/8rKVjHkvsVQ/s72-c/custom_console_1.png
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-3305879993133054579
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/03/customise-skin-of-weblogic-admin-console.html
 ---
 
 If you have several Weblogic servers you might find it useful to customise the look of the Admin Console so that you can quickly see which one you are on.  

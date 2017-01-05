@@ -2,12 +2,8 @@
 layout: post
 title: Spring @Autowired and the new operator
 date: '2012-08-09T10:17:00.000+01:00'
-author: David
-tags: 
+author: David Kerwick
 modified_time: '2012-08-09T10:17:23.083+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-8790621473285832872
-blogger_orig_url: http://davidkerwick.blogspot.com/2012/08/spring-autowired-and-new-operator.html
-
 ---
 
 So there I was happily shooting the breeze and added @Autowired to things like it was going out of fashion.  But I then added it to a normal bean, which I was creating using the new operator in a RowMapper. Something like this  
@@ -30,10 +26,10 @@ private static final class MyBeanMapper implements RowMapper <MyBean>{
 And MyBean looks something like  
 
 {% highlight java linenos %}
-	public class MyBean implements Serializable  
+public class MyBean implements Serializable  
 {  
     private static final long serialVersionUID = 1L;  
-    @Autowired 
+    @Autowired
     private transient SomeUtil someUtil;  
     private String param1;  
     private String param2;  
@@ -75,7 +71,7 @@ Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.a
 Time to check the dependencies I already had  
 
 {% highlight xml %}
-	<dependency>  
+<dependency>  
   <groupId>org.aspectj</groupId>  
   <artifactId>aspectjrt</artifactId>  
   <version>${org.aspectj-version}</version>  
@@ -119,11 +115,11 @@ And added it into <span class="emphasis">_$CATALINA_HOME_</span>/lib
 I went blunderbuss and added  
 
 {% highlight xml cssclass=nowrap%}
-	<Loader loaderClass="org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader" />  
+<Loader loaderClass="org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader" />  
 {% endhighlight %}
 
 to the Servers context.xml  
-Which lead to the error 
+Which lead to the error
 
 {% highlight java cssclass=nowrap%}java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context   
 {% endhighlight %}

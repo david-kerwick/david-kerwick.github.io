@@ -2,13 +2,9 @@
 layout: post
 title: Java Mission Control and Weblogic Dynamic Server
 date: '2014-04-23T20:38:00.002+01:00'
-author: David
+author: David Kerwick
 tags:
 - weblogic
-modified_time: '2014-04-23T22:09:55.728+01:00'
-blogger_id: tag:blogger.com,1999:blog-2027514548288128942.post-4971739960715300893
-blogger_orig_url: http://davidkerwick.blogspot.com/2014/04/java-mission-control-and-weblogic.html
-
 ---
 
 So the problem with dynamic servers is they are dynamic...  
