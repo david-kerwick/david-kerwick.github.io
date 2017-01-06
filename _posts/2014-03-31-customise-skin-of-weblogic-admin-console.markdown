@@ -22,7 +22,7 @@ cd /Oracle/Middleware/Oracle_Home/wlserver/server/lib/consoleapp/webapp/framewor
 What I have done is replace the Oracle logo with my own text to identify the server and added a coloured border to distinguish each server.  
 The red box surrounds where I want to place my custom text  
 
-[![](http://1.bp.blogspot.com/-326jiFs7_yg/UznMOs5gDmI/AAAAAAAAFLM/8rKVjHkvsVQ/s1600/custom_console_1.png)](http://1.bp.blogspot.com/-326jiFs7_yg/UznMOs5gDmI/AAAAAAAAFLM/8rKVjHkvsVQ/s1600/custom_console_1.png)
+![custom_console_1](/assets/img/customise-skin-of-weblogic-admin-console/custom-console-1.png)
 
 The first file you need to edit is console.css  
 Add following lines to the end of the file, this will insert the text "PRODUCTION TEST" as part of the header of the console, allowing you to see which server you are on  
@@ -39,7 +39,7 @@ Add following lines to the end of the file, this will insert the text "PRODUCTIO
 
 This adds the text with a blue background like like  
 
-[![](http://2.bp.blogspot.com/-pW2-c35L4NI/UznMOgum09I/AAAAAAAAFLQ/TWGR-oWhiFM/s1600/custom_console_2.png)](http://2.bp.blogspot.com/-pW2-c35L4NI/UznMOgum09I/AAAAAAAAFLQ/TWGR-oWhiFM/s1600/custom_console_2.png)
+![custom_console_2](/assets/img/customise-skin-of-weblogic-admin-console/custom-console-2.png)
 
 Next find the rule below and add the display setting which will hide the Oracle logo.  
 
@@ -52,7 +52,7 @@ Next find the rule below and add the display setting which will hide the Oracle 
 
 The logo should now be gone and should look like the below  
 
-[![](http://4.bp.blogspot.com/-Im0pMKdnpp4/UznMOtqS1TI/AAAAAAAAFLs/ESp78keXRWg/s1600/custom_console_3.png)](https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F4.bp.blogspot.com%2F-Im0pMKdnpp4%2FUznMOtqS1TI%2FAAAAAAAAFLs%2FESp78keXRWg%2Fs1600%2Fcustom_console_3.png&container=blogger&gadget=a&rewriteMime=image%2F*)
+![custom_console_3](/assets/img/customise-skin-of-weblogic-admin-console/custom-console-3.png)
 
 Lastly for this file find the below rule and change the padding to better align our new custom box  
 
@@ -67,9 +67,7 @@ Lastly for this file find the below rule and change the padding to better align 
 
 It should now look like below  
 
-[![](http://4.bp.blogspot.com/-zFWLrwtiz-4/UznMOxcTl6I/AAAAAAAAFLY/dZxj-AghDPQ/s1600/custom_console_4.png)](http://4.bp.blogspot.com/-zFWLrwtiz-4/UznMOxcTl6I/AAAAAAAAFLY/dZxj-AghDPQ/s1600/custom_console_4.png)
-
-[](http://4.bp.blogspot.com/-Im0pMKdnpp4/UznMOtqS1TI/AAAAAAAAFLs/ESp78keXRWg/s1600/custom_console_3.png)  
+![custom_console_4](/assets/img/customise-skin-of-weblogic-admin-console/custom-console-4.png)
 
 And lastly to create a coloured border edit the file general.css  
 Find the html element rule and add a border with the colour and size you want  
@@ -83,4 +81,4 @@ html {
 
 This should give you something like this, which I believe makes it easy to see which server you are on, you can have bolder colours represent your main servers.  
 
-[![](http://4.bp.blogspot.com/-gmmYx8m66Po/UznMPe7zzaI/AAAAAAAAFLc/m6vjqQgmK9E/s1600/custom_console_5.png)](http://4.bp.blogspot.com/-gmmYx8m66Po/UznMPe7zzaI/AAAAAAAAFLc/m6vjqQgmK9E/s1600/custom_console_5.png)
+![custom_console_5](/assets/img/customise-skin-of-weblogic-admin-console/custom-console-5.png)

@@ -8,7 +8,7 @@ author: David Kerwick
 So I got a http 400 error when testing a form I thought used to work.  
 Something like this  
 
-[![](http://1.bp.blogspot.com/-TrReH9mnDcs/VL1pze7ZqWI/AAAAAAAAFYA/J4WHLQ8WSP8/s1600/Screen%2BShot%2B2015-01-19%2Bat%2B20.28.33.png)](http://1.bp.blogspot.com/-TrReH9mnDcs/VL1pze7ZqWI/AAAAAAAAFYA/J4WHLQ8WSP8/s1600/Screen%2BShot%2B2015-01-19%2Bat%2B20.28.33.png)
+![Error Screenshot](/assets/img/http-400-error-submitting-form-with/error-screenshot.png)
 
 I'm using Spring MVC.  
 The form will submit fine if there are no errors but fails with a 400 error if there's a validation problem.  
