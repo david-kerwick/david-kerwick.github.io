@@ -25,6 +25,8 @@ rbenv install 2.3.3
 rbenv global 2.3.3
 {% endhighlight %}
 
+Don't forget to follow the cavets it tells you. i.e. add `eval "$(rbenv init -)"` to your profile.
+
 Then the new method is to install bundler, create a Gemfile and then use bundler to install Jekyll and github-pages
 
 {% highlight bash %}
