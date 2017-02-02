@@ -49,10 +49,33 @@ Flex-layout has a set of observables etc... you can use to query the breakpoints
 
 `npm install https://github.com/angular/flex-layout-builds.git -save`
 
-You then need to inject the `MatchMediaObservable` to get access to it in your template. I did that by adding a constructor to `app.component.ts`
+**UPDATE 2017-02-02**
+So the fun of running of a beta, this has changed now, `MatchMediaObservable` is no more so you will get not found errors.  It's now `ObservableMediaService` so that needs to be changed. But using the latest Angular CLI you'll get the error
 
 ```
-constructor(@Inject(MatchMediaObservable) private _media) {}
+Module build failed: TypeError: Cannot read property 'kind' of undefined
+    at /Users/David/Dropbox/work/HSE/Documents/workspace-sts-3.7.0.RELEASE/test-cli/node_modules/@ngtools/webpack/src/loader.js:93:31
+    at Array.map (native)
+    at _addCtorParameters (/Users/David/Dropbox/work/HSE/Documents/workspace-sts-3.7.0.RELEASE/test-cli/node_modules/@ngtools/webpack/src/loader.js:92:46)
+    at /Users/David/Dropbox/work/HSE/Documents/workspace-sts-3.7.0.RELEASE/test-cli/node_modules/@ngtools/webpack/src/loader.js:114:17
+    at Array.forEach (native)
+    at _removeDecorators (/Users/David/Dropbox/work/HSE/Documents/workspace-sts-3.7.0.RELEASE/test-cli/node_modules/@ngtools/webpack/src/loader.js:109:10)
+    at /Users/David/Dropbox/work/HSE/Documents/workspace-sts-3.7.0.RELEASE/test-cli/node_modules/@ngtools/webpack/src/loader.js:280:48
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+ @ ./src/$$_gendir/app/app.component.ngfactory.ts 12:0-51
+ @ ./src/$$_gendir/app/app.module.ngfactory.ts
+ @ ./src/main.ts
+ @ multi ./src/main.ts
+```
+
+The injected constructor argument needs a type to keep things happy.
+So new code follows
+**End update**
+
+You then need to inject the `ObservableMediaService` to get access to it in your template. I did that by adding a constructor to `app.component.ts`
+
+```
+constructor(@Inject(ObservableMediaService) private _media: OpaqueToken) {}
 ```
 
 Then in the template I removed the flex directives and used ngIf to conditionally display the image for the small and greater than small breakpoints
