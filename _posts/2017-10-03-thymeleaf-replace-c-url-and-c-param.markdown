@@ -39,7 +39,7 @@ So a direct replacement I think would be
 <div th:with="linkDescVar=#{linkDesc}"></div>
 ```
 
-Which sets up the linkDescVar within the context of the div (reckon the within the div bit is something that's worth nothing as the fmt:message var is available to the whole page)
+Which sets up the linkDescVar within the context of the div (reckon the within the div bit is something that's worth noting as the fmt:message var is available to the whole page)
 
 Another variant would be
 
