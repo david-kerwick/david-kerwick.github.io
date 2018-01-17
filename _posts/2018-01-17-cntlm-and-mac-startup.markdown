@@ -1,8 +1,9 @@
 ---
-layout: "post"
-title: "CNTLM and Mac startup"
-date: "2017-10-06 09:03"
+layout: post
+title: CNTLM and Mac startup
+date: '2018-01-17 12:13'
 ---
+
 In work I need to use [cntlm](http://cntlm.sourceforge.net/) to handle the Microsoft proxy.
 
 One of the things I was doing was starting it manually when I needed it. So that started being a pain so needed to get it to start running on startup. On a Mac that generally involves plists, LaunchAgent, etc...

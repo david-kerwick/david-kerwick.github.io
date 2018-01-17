@@ -1,11 +1,12 @@
 ---
-layout: "post"
-title: "Spring Boot outputting java 8 dates in rest controllers"
-date: "2017-10-06 09:03"
+layout: post
+title: Spring Boot outputting java 8 dates in rest controllers
+date: '2018-01-17 12:13'
 ---
+
 If you are using Spring Boot and have it marshaling your DTO's to json for you you'll probably encounter is handling dates in an 'oddball' fashion.
 
-So somthing like
+So something like
 
 ```
 "dob":[1970,10,30]
