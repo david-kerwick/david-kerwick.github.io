@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trying out the zsh shell
-categories: 
+categories:
  - blog
 date: 2015-09-06 23:58:17
 
@@ -11,31 +11,31 @@ So when watching googles coding tips on youtube they were talking about dotfiles
 
 Only way to find out is to try it out.  I've used bash for forever so hopefully it's not too different ;)
 
-#Update zsh
+# Update zsh
 May as well start off with the latest version
 {% highlight bash %}
 brew install zsh
 {% endhighlight %}
 
-This installs zsh to `/usr/local/bin/zsh` so I beleive some things need to change for that, it needs to be added to the list of accepted shells
+This installs zsh to `/usr/local/bin/zsh` so I believe some things need to change for that, it needs to be added to the list of accepted shells
 
-#Add homebrew zsh to allowed shells
+# Add homebrew zsh to allowed shells
 {% highlight bash %}
 sudo vi /etc/shells
-#add in the line
+# add in the line
 /usr/local/bin/zsh
 {% endhighlight %}
 
-#Change the shell
+# Change the shell
 Then change the shell
 
 {% highlight bash %}
 chsh -s /usr/local/bin/zsh
 {% endhighlight %}
 
-#Configure zsh
+# Configure zsh
 Restart the terminal and zsh should scare you with a world of options...
-That is 
+That is
 > "This is the Z Shell configuration function for new users"
 
 I followed the config wizard changed what I thought made sense.
@@ -46,7 +46,7 @@ You can always run it again it seems
   zsh-newuser-install -f
 {% endhighlight %}
 
-#Profit...
+# Profit...
 So autocompletion is cool
 {% highlight bash %}
 cd /u/l/b
