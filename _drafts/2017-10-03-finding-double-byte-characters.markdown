@@ -9,7 +9,7 @@ Things started off with a database insert breaching the size limits on a column.
 
 Turns out the database column in question is specified using BYTE i.e. `VARCHAR2(20 BYTE)` and xml being a good internet citizen treats strings as UTF-8 so counts double byte characters as 1 like for example things with fada's á ú etc... but they take up two bytes so if you are at the limit this can push you over the edge.
 
-Now finding the offender in a giant blob of xml is no fun. Especially when it's a invisible character.
+Now finding the offender in a giant blob of xml is no fun. Especially when it's an invisible character.
 So regex to the rescue
 
 ```

@@ -6,7 +6,7 @@ date: "2018-02-27 21:48"
 Having built up a few posts the number of times I want to link back to one of
 them is starting to increase. So I'd like a faster way of doing that.
 
-Main thing is the post title is transformed and the date added when up publish
+Main thing is the post title is transformed and the date added when you publish
 the post so there's no easy copy and paste of the post title or the date.
 So typing it out isn't that bad but slowish and a bit error prone.
 
