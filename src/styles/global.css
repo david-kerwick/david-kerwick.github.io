@@ -1,0 +1,34 @@
+.note {
+  margin: 10px 0px;
+  padding: 12px;
+  color: #00529b;
+  background-color: #bde5f8;
+}
+
+.social-section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-section > div {
+  flex-grow: 1;
+  min-width: 13em;
+}
+
+.social-section .center{
+  text-align: center;
+}
+
+.social-section .right{
+  text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .social-section .center{
+  text-align: left;
+}
+
+.social-section .right{
+  text-align: left;
+}
+}
