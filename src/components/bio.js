@@ -36,7 +36,7 @@ function Bio() {
               </div>
               <div className='center'>
                 <a
-                  href={`https://twitter.com/${social.github}`}
+                  href={`https://github.com/${social.github}`}
                   style={{ boxShadow: `none` }}
                 >
                   <Image
@@ -54,7 +54,7 @@ function Bio() {
               </div>
               <div className='right'>
                 <a
-                  href={`https://twitter.com/${social.github}`}
+                  href={`mailto:david.kerwick@gmail.com`}
                   style={{ boxShadow: `none` }}
                 >
                   <Image

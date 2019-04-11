@@ -1,7 +1,7 @@
 ---
-layout: "post"
-title: "Finding double byte characters in text files"
-date: "2017-10-06 09:03"
+layout: post
+title: Finding double byte characters in text files
+date: '2017-10-06T09:03:00'
 ---
 Having just coming out of hunting down an oddball error I thought it might be a good idea write down some steps.
 
