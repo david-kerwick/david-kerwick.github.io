@@ -3,7 +3,6 @@ layout: post
 title: Google Code Prettify - Add a Theme
 date: '2012-05-03T22:20:00.000+01:00'
 author: David Kerwick
-modified_time: '2012-05-03T22:44:51.225+01:00'
 ---
 <div class="note">
   <span>I'm not on Blogger anymore</span>

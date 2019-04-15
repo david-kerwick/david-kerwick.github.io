@@ -3,7 +3,6 @@ layout: post
 title: Syntax Highlighter and Blogger Dynamic Views
 date: '2014-02-07T21:07:00.000Z'
 author: David Kerwick
-modified_time: '2014-02-08T00:42:24.029Z'
 ---
 
 <div class="note">

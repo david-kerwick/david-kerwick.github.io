@@ -3,10 +3,6 @@ layout: post
 title: Turn off the firewall on RedHat linux
 date: '2014-03-27T21:06:00.000Z'
 author: David Kerwick
-tags: 
-modified_time: '2014-03-27T21:08:26.065Z'
-
-
 ---
 
 If you are  having problems connecting with the Weblogic server you have just installed it's worth looking at the firewall, as every good developer knows all problems are either the network or the firewall ;)  

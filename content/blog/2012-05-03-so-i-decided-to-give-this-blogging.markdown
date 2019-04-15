@@ -3,7 +3,6 @@ layout: post
 title: Blogger Getting Started
 date: '2012-05-03T21:28:00.000+01:00'
 author: David Kerwick
-modified_time: '2014-02-07T21:28:51.976Z'
 ---
 
 <div class="note">

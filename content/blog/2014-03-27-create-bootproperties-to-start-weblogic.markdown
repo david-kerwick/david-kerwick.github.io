@@ -5,9 +5,6 @@ date: '2014-03-27T18:53:00.002Z'
 author: David Kerwick
 tags:
 - weblogic
-modified_time: '2014-03-27T18:53:24.771Z'
-
-
 ---
 
 So you have been starting the admin server using the startWeblogic.sh script and you are tired of entering the username and password each time.  You want the credentials stored, this can be done by creating a boot.properties file where the admin server will take the credentials.  

@@ -6,10 +6,6 @@ author: David Kerwick
 tags:
 - wlst
 - weblogic
-modified_time: '2014-04-23T22:10:56.204+01:00'
-
-
-
 ---
 
 If you are running your own scripts or attempting to run some of the scripts on this blog and you encounter the error  

@@ -3,7 +3,6 @@ layout: post
 title: Remove the social buttons from Blogger Dynamic Views
 date: '2014-02-08T00:02:00.003Z'
 author: David Kerwick
-modified_time: '2014-02-08T00:11:15.167Z'
 ---
 
 <div class="note">

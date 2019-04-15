@@ -3,10 +3,6 @@ layout: post
 title: Creating an SSH key and add it to a server
 date: '2015-03-25T23:26:00.003Z'
 author: David Kerwick
-tags: 
-modified_time: '2015-03-25T23:26:48.771Z'
-
-
 ---
 
 So it's rare when I have to generate a new key and add it to a server to I forget the commands, they ain't complex so here they are  

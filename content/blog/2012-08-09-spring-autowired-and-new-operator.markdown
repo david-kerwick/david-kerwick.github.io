@@ -3,7 +3,6 @@ layout: post
 title: Spring @Autowired and the new operator
 date: '2012-08-09T10:17:00.000+01:00'
 author: David Kerwick
-modified_time: '2012-08-09T10:17:23.083+01:00'
 ---
 
 So there I was happily shooting the breeze and added @Autowired to things like it was going out of fashion.  But I then added it to a normal bean, which I was creating using the new operator in a RowMapper. Something like this  

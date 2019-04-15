@@ -3,7 +3,6 @@ layout: post
 title: Get prettify to behave in Firefox
 date: '2012-05-03T23:18:00.000+01:00'
 author: David Kerwick
-modified_time: '2012-05-03T23:18:13.885+01:00'
 ---
 
 <div class="note info">

@@ -3,8 +3,6 @@ layout: post
 title: Fixed IP under Red Hat 6.5
 date: '2014-02-12T12:03:00.003Z'
 author: David Kerwick
-tags:
-modified_time: '2014-02-12T12:03:53.706Z'
 ---
 
 I have a Red Hat test server I needed to set up with a fixed IP address.  Handy info with a good bit of info available so just a memory dump for handy reference.  
