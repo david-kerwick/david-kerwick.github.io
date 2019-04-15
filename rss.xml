@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Random Stuff About Stuff]]></title><description><![CDATA[Random stuff about stuff.]]></description><link>https://david-kerwick.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Mon, 15 Apr 2019 15:17:36 GMT</lastBuildDate><item><title><![CDATA[Moving Blog to Gatsby]]></title><description><![CDATA[It’s that time again, where I look at blogging something and decide I may as well change the system I’m using first.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Random Stuff About Stuff]]></title><description><![CDATA[Random stuff about stuff.]]></description><link>https://david-kerwick.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Mon, 15 Apr 2019 20:06:47 GMT</lastBuildDate><item><title><![CDATA[Moving Blog to Gatsby]]></title><description><![CDATA[It’s that time again, where I look at blogging something and decide I may as well change the system I’m using first.
 A developer affliction…]]></description><link>https://david-kerwick.github.io//moving-to-gatsby/</link><guid isPermaLink="false">https://david-kerwick.github.io//moving-to-gatsby/</guid><pubDate>Mon, 15 Apr 2019 14:12:42 GMT</pubDate><content:encoded>&lt;p&gt;It’s that time again, where I look at blogging something and decide I may as well change the system I’m using first.
 A developer affliction I’m sure. Jekyll has worked really well and it’s blog workflow is really good. But may as well try the new kid. Well by the time I tend to hear about these things they aren’t that new, but for some reason &lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;GatsbyJS&lt;/a&gt; kept showing up in my twitter feed with people saying how awesome it is, in particular the developer experience.&lt;/p&gt;
 &lt;p&gt;So that’s what the blog is on now. It wasn’t too bad at all. Sure helps they are both Markdown based. I did have to go through some of my posts and get rid of some liquid tags I used, at the start I was using &lt;code class=&quot;language-text&quot;&gt;{% highlight %}&lt;/code&gt; blocks for code instead of the standard Markdown code fencing blocks.  There was a few like that where Liquid tags were used and had to be replaced with more standard Markdown. That’s no bad thing I think, the blog in theory is more portable now.&lt;/p&gt;
@@ -2164,43 +2164,7 @@ I also didn’t want to checkout all the repos involved.&lt;/p&gt;
 
 &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; locks &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;xargs&lt;/span&gt; -d \\n &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; svnadmin rmlocks /svnrepos/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;So find all the locks in under a path.&lt;/p&gt;
-&lt;p&gt;Then pipe them to the unlock command.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Comparing property files on linux]]></title><description><![CDATA[I was upgrading sonarqube and one of the things was to move custom settings in the old property file to the new one.  They say don’t copy…]]></description><link>https://david-kerwick.github.io//2016-02-05-comparing-property-files-on-linux/</link><guid isPermaLink="false">https://david-kerwick.github.io//2016-02-05-comparing-property-files-on-linux/</guid><pubDate>Tue, 01 Dec 2015 14:17:24 GMT</pubDate><content:encoded>&lt;p&gt;I was upgrading sonarqube and one of the things was to move custom settings in the old property file to the new one.  They say don’t copy the whole file as other things may have changed etc…&lt;/p&gt;
-&lt;p&gt;Property files tend to be huge things with alot of the defaults commented out so find the bits you added can be a bit of fun.&lt;/p&gt;
-&lt;p&gt;You can of course use good ole grep to only show the uncommented lines&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; -v &lt;span class=&quot;token string&quot;&gt;&apos;^#&apos;&lt;/span&gt; sonar.properties&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;-v&lt;/code&gt; inverts the match
-&lt;code class=&quot;language-text&quot;&gt;&amp;#39;^#&amp;#39;&lt;/code&gt; is lines start with a comment&lt;/p&gt;
-&lt;p&gt;But I wanted to compare the files and ignore the irrelevant bits.&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;diff&lt;/code&gt; is a bit hard on the eyes I think so used &lt;code class=&quot;language-text&quot;&gt;sdiff&lt;/code&gt; ‘side by side diff’&lt;/p&gt;
-&lt;p&gt;What I ended up with was&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sdiff&lt;/span&gt; --strip-trailing-cr -sBI &lt;span class=&quot;token string&quot;&gt;&apos;^#&apos;&lt;/span&gt; /opt/sonarqube-5.1.2/conf/sonar.properties /opt/sonar/conf/sonar.properties&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;So I ended up throwing a few options at it&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Option&lt;/th&gt;
-&lt;th align=&quot;center&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;—strip-trailing-cr&lt;/td&gt;
-&lt;td align=&quot;center&quot;&gt;The file name windows carriage returns so remove them&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;-s&lt;/td&gt;
-&lt;td align=&quot;center&quot;&gt;Don’t show common lines&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;-B&lt;/td&gt;
-&lt;td align=&quot;center&quot;&gt;Don’t show blank lines&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;-I ’^#’&lt;/td&gt;
-&lt;td align=&quot;center&quot;&gt;Ignore lines starting with a comment&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;</content:encoded></item><item><title><![CDATA[Git import old kind of related but not really history]]></title><description><![CDATA[So some of the projects I’ve work on for a while have had various version control systems used, VSS, SVN and now GIT.  The fun here is not…]]></description><link>https://david-kerwick.github.io//2016-02-05-git-import-old-kind-of-related-but-not-really-history/</link><guid isPermaLink="false">https://david-kerwick.github.io//2016-02-05-git-import-old-kind-of-related-but-not-really-history/</guid><pubDate>Tue, 01 Dec 2015 14:17:24 GMT</pubDate><content:encoded>&lt;p&gt;So some of the projects I’ve work on for a while have had various version control systems used, VSS, SVN and now GIT.  The fun here is not all imports have gone that well, there has been upgrades that happened in a different project because branches weren’t very good (VSS) or the project has be moved and renamed (SVN) so now that it’s landed in GIT I thought I try tie them togther in one repo, before they were always in the big giant repo.&lt;/p&gt;
+&lt;p&gt;Then pipe them to the unlock command.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git import old kind of related but not really history]]></title><description><![CDATA[So some of the projects I’ve work on for a while have had various version control systems used, VSS, SVN and now GIT.  The fun here is not…]]></description><link>https://david-kerwick.github.io//2016-02-05-git-import-old-kind-of-related-but-not-really-history/</link><guid isPermaLink="false">https://david-kerwick.github.io//2016-02-05-git-import-old-kind-of-related-but-not-really-history/</guid><pubDate>Tue, 01 Dec 2015 14:17:24 GMT</pubDate><content:encoded>&lt;p&gt;So some of the projects I’ve work on for a while have had various version control systems used, VSS, SVN and now GIT.  The fun here is not all imports have gone that well, there has been upgrades that happened in a different project because branches weren’t very good (VSS) or the project has be moved and renamed (SVN) so now that it’s landed in GIT I thought I try tie them togther in one repo, before they were always in the big giant repo.&lt;/p&gt;
 &lt;p&gt;The problem is as far as git is concerned they have nothing in common. The VSS is completely seperate and with SVN the SVN to GIT import doesn’t follow renames, so they are seperate too.&lt;/p&gt;
 &lt;p&gt;I had tried importing the history as seperate repo’s pull them all into one repo and merging them.  That kind of works but is an unholy mess to look at.&lt;/p&gt;
 &lt;p&gt;So I decided to try again.
@@ -2259,7 +2223,43 @@ rbenv &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; 2.2.3
 &lt;span class=&quot;token comment&quot;&gt;# Set the global verion to that&lt;/span&gt;
 rbenv global 2.2.3
 &lt;span class=&quot;token comment&quot;&gt;# After that the install should work again&lt;/span&gt;
-gem &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Java 8 replace loop with lamda]]></title><description><![CDATA[So we have upgraded to Java 8 and so there’s the oppurtunity to refactor some things when they are being upgraded for other reasons. So one…]]></description><link>https://david-kerwick.github.io//2016-02-08-java-8-replace-loop-with-lamda/</link><guid isPermaLink="false">https://david-kerwick.github.io//2016-02-08-java-8-replace-loop-with-lamda/</guid><pubDate>Tue, 01 Dec 2015 14:17:24 GMT</pubDate><content:encoded>&lt;p&gt;So we have upgraded to Java 8 and so there’s the oppurtunity to refactor some things when they are being upgraded for other reasons.&lt;/p&gt;
+gem &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Comparing property files on linux]]></title><description><![CDATA[I was upgrading sonarqube and one of the things was to move custom settings in the old property file to the new one.  They say don’t copy…]]></description><link>https://david-kerwick.github.io//2016-02-05-comparing-property-files-on-linux/</link><guid isPermaLink="false">https://david-kerwick.github.io//2016-02-05-comparing-property-files-on-linux/</guid><pubDate>Tue, 01 Dec 2015 14:17:24 GMT</pubDate><content:encoded>&lt;p&gt;I was upgrading sonarqube and one of the things was to move custom settings in the old property file to the new one.  They say don’t copy the whole file as other things may have changed etc…&lt;/p&gt;
+&lt;p&gt;Property files tend to be huge things with alot of the defaults commented out so find the bits you added can be a bit of fun.&lt;/p&gt;
+&lt;p&gt;You can of course use good ole grep to only show the uncommented lines&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; -v &lt;span class=&quot;token string&quot;&gt;&apos;^#&apos;&lt;/span&gt; sonar.properties&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;-v&lt;/code&gt; inverts the match
+&lt;code class=&quot;language-text&quot;&gt;&amp;#39;^#&amp;#39;&lt;/code&gt; is lines start with a comment&lt;/p&gt;
+&lt;p&gt;But I wanted to compare the files and ignore the irrelevant bits.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;diff&lt;/code&gt; is a bit hard on the eyes I think so used &lt;code class=&quot;language-text&quot;&gt;sdiff&lt;/code&gt; ‘side by side diff’&lt;/p&gt;
+&lt;p&gt;What I ended up with was&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sdiff&lt;/span&gt; --strip-trailing-cr -sBI &lt;span class=&quot;token string&quot;&gt;&apos;^#&apos;&lt;/span&gt; /opt/sonarqube-5.1.2/conf/sonar.properties /opt/sonar/conf/sonar.properties&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So I ended up throwing a few options at it&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Option&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;—strip-trailing-cr&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;The file name windows carriage returns so remove them&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-s&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;Don’t show common lines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-B&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;Don’t show blank lines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-I ’^#’&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;Ignore lines starting with a comment&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</content:encoded></item><item><title><![CDATA[Java 8 replace loop with lamda]]></title><description><![CDATA[So we have upgraded to Java 8 and so there’s the oppurtunity to refactor some things when they are being upgraded for other reasons. So one…]]></description><link>https://david-kerwick.github.io//2016-02-08-java-8-replace-loop-with-lamda/</link><guid isPermaLink="false">https://david-kerwick.github.io//2016-02-08-java-8-replace-loop-with-lamda/</guid><pubDate>Tue, 01 Dec 2015 14:17:24 GMT</pubDate><content:encoded>&lt;p&gt;So we have upgraded to Java 8 and so there’s the oppurtunity to refactor some things when they are being upgraded for other reasons.&lt;/p&gt;
 &lt;p&gt;So one of these is converting some loops to lamda’s, when the loops are doing extra logic, a standard loop doesn’t make much sense to play with.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; propMap &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;TestObject&lt;/span&gt; testObject &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; properties&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
