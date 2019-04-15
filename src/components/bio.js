@@ -12,7 +12,7 @@ function Bio() {
           <div>
             <div>
               Written by <strong>{author}</strong> who lives and works Dublin as
-              a Java Techincal Lead.
+              a Java Technical Lead.
             </div>
             <div className='social-section'>
               <div>
