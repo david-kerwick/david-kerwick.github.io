@@ -30,6 +30,6 @@ or
 ```
 
 Java has a nice crusty bug  
-[http://bugs.java.com/view_bug.do;jsessionid=ff625daf459fdffffffffcd54f1c775299e0?bug_id=6202721](http://bugs.java.com/view_bug.do;jsessionid=ff625daf459fdffffffffcd54f1c775299e0?bug_id=6202721)  
+[https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6202721](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6202721)  
 
 Which they don't class as a bug for some reason, it doesn't do what you ask... yep that's by design and won't be fixed!  Use the hack to confuse it, lovely.
