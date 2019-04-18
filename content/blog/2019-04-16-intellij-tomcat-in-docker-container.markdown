@@ -79,3 +79,11 @@ JAVA_OPTS=-XX:MaxMetaspaceSize\=512m -Xmx512m -Xss512m -Djava.security.egd\=file
 ```
 
 Random is a known performance problem as there just isn't enough entropy in the container. Normal warnings apply to urandom (it isn't full secure) but the performance on startup is still pretty poor.
+
+**Update**
+
+So it seems the slowness is a known [issue](https://forums.docker.com/t/file-access-in-mounted-volumes-extremely-slow-cpu-bound/8076/) and it's to do with Docker on the Mac, Spring and Tomcat are innocent I tried the cached setting explained [here](https://blog.docker.com/2017/05/user-guided-caching-in-docker-for-mac/) but it made no real difference. If you copy the war into a new image and run that container it extremely fast, but that seems like quite the pain.
+
+**Further update**
+
+So in the end what worked is to volume mount the war file to a file in the webapps folder. You can't do this using the bind mounts as mentioned above so add it to the Run Options. It now starts in about 2 seconds as opposed to 25 plus
